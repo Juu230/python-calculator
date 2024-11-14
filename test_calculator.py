@@ -24,12 +24,13 @@ class TestCalculator(unittest.TestCase):
     def test_divide(self):
         self.assertEqual(self.calc.divide(5,2),2)
         self.assertEqual(self.calc.divide(4,0),"can't divide")
-        self.assertEqual(self.calc.divide(0,4),0)
+        self.assertEqual(self.calc.divide(8,-4),-2)
 
     def test_modulo(self):
         self.assertEqual(self.calc.modulo(5,2),1)
-        self.assertEqual(self.calc.modulo(5,2),1)
-        self.assertEqual(self.calc.modulo(5,2),1)
+        self.assertEqual(self.calc.modulo(4,0),"divisor can't be 0")
+        self.assertEqual(self.calc.modulo(10, -4),-2)
+        self.assertEqual(self.calc.modulo(-10,3),2)
     # Add the following test methods to the TestCalculator class:
 
 if __name__ == '__main__':
